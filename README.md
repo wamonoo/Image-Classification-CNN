@@ -1,9 +1,16 @@
 # Image-Classification-CNN
-We use Kera's flexible graph functional model to build a basic Convolutional Neural Network that can differentiate between cats and dogs. The model is trained on 8000 images and tested on 2000 images of cats and dogs.
+
+## Is it a Cat or a Dog?
+
+We use Kera's flexible graph functional model to build a basic Convolutional Neural Network(CNN) that can differentiate between cats and dogs. The model is trained on 8000 images and tested on 2000 images of cats and dogs.
 The forward propagation for the model is in the form of 
  - CONV2D -> RELU -> MAXPOOL -> CONV2D -> RELU -> MAXPOOL -> FLATTEN -> DENSE
 
 We achieve an accuracy of 80% for predictions on the test data set. 
+
+![image](https://github.com/user-attachments/assets/13c21ce9-d65c-4063-8eec-62a7b6cf44e1)
+
+
 The model does quite well with relatively high probabilities when predicting new random images of cats or dogs. However, the prediction probabilities reduce as the images get obscured or new additional items are introduced into the images. e.g. The model predicts a dog with 99.9% certainty given a random image of a dog with clear features, but the prediction probability drops when the dog is partially obscured by objects such as furniture or toys. Similarly, for cat images, the model shows high confidence (around 98%) when the image is unambiguous, but this confidence declines significantly as additional elements like shadows or other animals are introduced. 
 
 ![image](https://github.com/user-attachments/assets/be628885-df7d-4c73-b53a-a66eb20471e3)
